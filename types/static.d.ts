@@ -55,5 +55,9 @@ declare module '*.png' {
   const ref: string;
   export default ref;
 }
+declare module '*.pdf' {
+  const ref: string;
+  export default ref;
+}
 
 /* CUSTOM: ADD YOUR OWN HERE */

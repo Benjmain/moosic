@@ -6,43 +6,39 @@
         Edit
         <code>src/App.vue</code> and save to reload.
       </p>
-      <p class="App-tsx">
-        <FooTsxVue />
-        <FooTsx />
-        <BarJsxVue />
-        <BarJsx />
-      </p>
-      <a class="App-link" href="https://vuejs.org" target="_blank" rel="noopener noreferrer">{{
-        state.message
-      }}</a>
+      <p class="App-tsx"></p>
+      <a class="App-link" href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
+        Dear {{ user.name }},
+        <br />
+        {{ state.message }}
+      </a>
     </header>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent, reactive} from 'vue';
-import FooTsxVue from './components/FooTsx.vue';
-import FooTsx from './components/Foo';
-import BarJsxVue from './components/BarJsx.vue';
-import BarJsx from './components/Bar';
+import { defineComponent, reactive } from 'vue';
+import type User from './domain/user';
 
 interface State {
   message: string;
 }
 
 export default defineComponent({
-  components: {
-    FooTsxVue,
-    FooTsx,
-    BarJsxVue,
-    BarJsx,
-  },
+  components: {},
   setup() {
     const state = reactive({
       message: 'Learn Vue',
     });
+
+    const user: User = {
+      id: 'my-id',
+      name: 'name',
+    };
+
     return {
       state,
+      user,
     };
   },
 });

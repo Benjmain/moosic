@@ -1,5 +1,6 @@
 {
-  "include": ["src", "types"],
+  "include": ["src/**/*.ts", "src/**/*.vue", "types"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",

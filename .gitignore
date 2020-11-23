@@ -1,4 +1,11 @@
+.idea
+.yarn
 .build
 build
 web_modules
 node_modules
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*

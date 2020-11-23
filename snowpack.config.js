@@ -4,11 +4,7 @@ module.exports = {
     public: '/',
     src: '/_dist_',
   },
-  plugins: [
-    '@snowpack/plugin-vue',
-    '@snowpack/plugin-vue/plugin-tsx-jsx.js',
-    '@snowpack/plugin-dotenv',
-  ],
+  plugins: ['@snowpack/plugin-vue', '@snowpack/plugin-vue/plugin-tsx-jsx.js', '@snowpack/plugin-dotenv'],
   install: [
     /* ... */
   ],
@@ -16,7 +12,7 @@ module.exports = {
     /* ... */
   },
   devOptions: {
-    /* ... */
+    port: 3000,
   },
   buildOptions: {
     /* ... */
